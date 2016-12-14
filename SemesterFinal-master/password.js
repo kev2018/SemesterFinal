@@ -17,19 +17,24 @@ class Password{
       //true;
       console.log(true);
     }
+
+
+
+
+
   };
   validPrivateKey(){
-    if(this.privkey[4]!=String.fromCharCode(45) && this.privkey[9]!=String.fromCharCode(45)){
+    //if(this.privkey.charAt(4) != '-' || this.privkey.charAt(9)!= '-'){
     //false;
-    console.log(false);  //console.log('Not correct format.');
-    }
-    else if(Number.isInteger(this.privkey[0,1,2,3,5,6,7,8,10,11,12,13]) == false){
+    //console.log(false);
+    //console.log('Not correct format.');
+  };
+    /*else if(Number.isInteger(this.privkey[0,1,2,3,5,6,7,8,10,11,12,13]) == false){
     //false;
-    console.log(false); //console.log('Not correct format.');
+    console.log(false);
+    //console.log('Not correct format.');
     }
-    else if(this.privkey.length >14){
-      //false;
-      console.log(false);
+
     }
     else{
       //true;
@@ -39,8 +44,9 @@ class Password{
   static makePrivateKey(){
     let key ='';
     let limit = 14;
-  };
+  };*/
 }
-let yo = new Password('aaaaaaaa','1234-1234-1234');
-console.log(yo.validPrivateKey());
-console.log(yo.validPublicKey());
+let wtf = new Password('aaaaaaaa','1234-1234-1234');
+//wtf.validPrivateKey();
+//yo.validPublicKey();
+this.privkey.charAt(4);

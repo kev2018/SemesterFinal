@@ -19,31 +19,35 @@ class Cart{
     this.itemQuantity = [Quant];
   };
   additem(i,q){
-this.itemList.push(i);
-this.itemQuantity.push(q);
+    this.itemList.push(i);
+    this.itemQuantity.push(q);
   };
   totalCart(){
     let total = 0;
-for(let c =0;c<this.itemList.length;c++){
-let item =(this.itemList[c].price)*this.itemQuantity[c];
-total = total + item;
-//return total;
-console.log(total);
-}
+    for(let c =0;c<this.itemList.length;c++){
+      let item =(this.itemList[c].price)*this.itemQuantity[c];
+        total = total + item;
+
+        }
+        console.log(total);
+        //return total;
   };
   subCart(d){
     let subcart = [];
-for(let t=0;t<this.itemList.length;t++){
-  if(this.itemList[t].shipping == d){
-    subcart.push(this.itemList[t]);
-  }
-  else{
-    console.log('no item matches your search.');
-  }
-}
-  };
+    for(let t=0;t<this.itemList.length;t++){
+      if(this.itemList[t].shipping == d){
+        subcart.push(this.itemList[t].name);
+        }
+        else{
+          console.log('Your search has no results.');
+        }
+        console.log(subcart);
+        //return subcart;
+      }
+    };
 }
 let amazon = new Cart(Nerf,1);
 amazon.additem(hotwheels,2);
 amazon.additem(Pants,1);
 amazon.totalCart();
+amazon.subCart(3);
