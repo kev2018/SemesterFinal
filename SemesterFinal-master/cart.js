@@ -33,21 +33,17 @@ class Cart{
         //return total;
   };
   subCart(d){
-    let subcart = [];
+    let subcart = new Cart([],[]);
     for(let t=0;t<this.itemList.length;t++){
       if(this.itemList[t].shipping == d){
         subcart.push(this.itemList[t].name);
+        subcart.push(this.itemQuantity[t]);
         }
         else{
           console.log('Your search has no results.');
         }
-        console.log(subcart);
-        //return subcart;
       }
+      console.log(subcart);
+      //return subcart;
     };
 }
-let amazon = new Cart(Nerf,1);
-amazon.additem(hotwheels,2);
-amazon.additem(Pants,1);
-amazon.totalCart();
-amazon.subCart(3);

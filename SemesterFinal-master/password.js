@@ -24,29 +24,27 @@ class Password{
 
   };
   validPrivateKey(){
-    //if(this.privkey.charAt(4) != '-' || this.privkey.charAt(9)!= '-'){
-    //false;
-    //console.log(false);
-    //console.log('Not correct format.');
-  };
-    /*else if(Number.isInteger(this.privkey[0,1,2,3,5,6,7,8,10,11,12,13]) == false){
-    //false;
+    if(this.privkey.charAt(4) != '-' || this.privkey.charAt(9)!= '-'){
+    false;
     console.log(false);
-    //console.log('Not correct format.');
-    }
-
-    }
-    else{
-      //true;
-      console.log(true);
-    }
+    console.log('Not correct format.');
+  }
   };
+    else if(){
+
+    };
+    else{
+      true;
+      console.log(true);
+    };
   static makePrivateKey(){
     let key ='';
     let limit = 14;
-  };*/
+    for(a=0;a<5;a++){
+    key += 'Math.round(Math.random()*10)';
+    }
+    console.log(key);
+  };
 }
 let wtf = new Password('aaaaaaaa','1234-1234-1234');
-//wtf.validPrivateKey();
-//yo.validPublicKey();
-this.privkey.charAt(4);
+Password.makePrivateKey();
