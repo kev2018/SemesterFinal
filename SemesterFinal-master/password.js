@@ -29,22 +29,27 @@ class Password{
     console.log(false);
     console.log('Not correct format.');
   }
-  };
     else if(){
-
-    };
+Number.isNaN()
+    }
     else{
       true;
       console.log(true);
-    };
+    }
+  };
   static makePrivateKey(){
     let key ='';
     let limit = 14;
-    for(a=0;a<5;a++){
-    key += 'Math.round(Math.random()*10)';
+    for(let a=0;a<limit;a++){
+      if(a=4||a=9){
+        key += '-';
+      }
+      else{
+      key += String(Math.floor(Math.random()*10));
     }
-    console.log(key);
-  };
+  }
+console.log(key);
+  }
 }
 let wtf = new Password('aaaaaaaa','1234-1234-1234');
 Password.makePrivateKey();
