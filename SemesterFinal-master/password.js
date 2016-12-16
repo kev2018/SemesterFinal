@@ -5,21 +5,32 @@ class Password{
   }
   validPublicKey(){
     if(this.pubkey.length <8){
-      //false;
-      console.log(false);
+      return false;
     }
     else if(this.pubkey.length >25){
-      //false;
-      console.log(false);
+      return false;
     }
     else{
-      //true;
-      console.log(true);
+      return true;
     }
   }
-
   validPrivateKey(){
-    
+    if(this.privkey.charAt(4) != '-' || this.privkey.charAt(9)!= '-'){
+      return false;
+    }
+    else if(Number.isNaN(Number(this.privkey.substring(0,4)))){
+      return false;
+    }
+    else if(Number.isNaN(Number(this.privkey.substring(5,9)))){
+      return false;
+    }
+    else if(Number.isNaN(Number(this.privkey.substring(10,14)))){
+      return false;
+    }
+    else{
+      return true;
+    }
+
   }
   static makePrivateKey(){
     let key ='';
@@ -32,10 +43,6 @@ class Password{
       key += String(Math.floor(Math.random()*10));
     }
   }
-console.log(key);
+  return key;
   }
 }
-let wtf = new Password('aaaaaaaa','a234-1234-1234');
-//Password.makePrivateKey();
-
-wtf.validPrivateKey();

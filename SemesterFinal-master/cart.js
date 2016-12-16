@@ -2,23 +2,19 @@ class Cart{
   constructor(List,Quant){
     this.itemList = List;// array
     this.itemQuantity = Quant;// ditto
-    this.itemList = [List];
-    this.itemQuantity = [Quant];
-  };
+  }
   additem(i,q){
     this.itemList.push(i);
     this.itemQuantity.push(q);
-  };
+  }
   totalCart(){
     let total = 0;
     for(let c =0;c<this.itemList.length;c++){
       let item =(this.itemList[c].price)*this.itemQuantity[c];
-        total = total + item;
-
+        total += item;
         }
-        console.log(total);
-        //return total;
-  };
+        return total;
+  }
   subCart(d){
     let subcart = new Cart([],[]);
     for(let t=0;t<this.itemList.length;t++){
@@ -26,11 +22,7 @@ class Cart{
         subcart.push(this.itemList[t].name);
         subcart.push(this.itemQuantity[t]);
         }
-        else{
-          console.log('Your search has no results.');
-        }
       }
-      console.log(subcart);
-      //return subcart;
-    };
+      return subcart;
+    }
 }
